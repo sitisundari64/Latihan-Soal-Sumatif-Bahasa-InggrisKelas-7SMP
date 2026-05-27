@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Latihan Sumatif Bahasa Inggris Kelas 7</title>
+  <style>
+    :root{
+      --blue:#8ecae6;
+      --yellow:#ffd166;
+      --peach:#ffb4a2;
+      --mint:#b8f2d8;
+      --purple:#cdb4db;
+      --pink:#ffafcc;
+      --dark:#243047;
+      --soft:#f8fbff;
+      --line:#dbe7f3;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:'Trebuchet MS', Arial, sans-serif;
+      background:linear-gradient(135deg,#eaf8ff,#fff8df,#fff0f4);
+      color:var(--dark);
+    }
+    .app{
+      max-width:1080px;
+      margin:auto;
+      padding:20px;
+    }
+    .hero{
+      background:white;
+      border:4px solid var(--blue);
+      border-radius:28px;
+      padding:24px;
+      box-shadow:0 12px 30px rgba(36,48,71,.12);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero:before{
+      content:'✦ ✧ ★ ☁︎ 📘 ✏️ 🌈';
+      position:absolute;
+      right:18px;
+      top:12px;
+      font-size:30px;
+      opacity:.55;
+    }
+    h1{
+      margin:0;
+      font-size:clamp(32px,6vw,64px);
+      line-height:1;
+      color:#2b6cb0;
+      text-shadow:3px 3px 0 #d8f3ff;
+      letter-spacing:1px;
+    }
+    .subtitle{
+      display:inline-block;
+      margin-top:10px;
+      background:var(--yellow);
+      padding:10px 18px;
+      border-radius:999px;
+      font-weight:900;
+      color:#33415c;
+      box-shadow:inset 0 -4px rgba(255,255,255,.45);
+    }
+    .student-card{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:1fr 1fr auto;
+      gap:12px;
+      align-items:end;
+    }
+    label{font-weight:800;font-size:14px}
+    input[type="text"]{
+      width:100%;
+      border:2px solid var(--line);
+      border-radius:16px;
+      padding:13px 14px;
+      font-size:16px;
+      background:#fbfdff;
+      outline:none;
+    }
+    input[type="text"]:focus{border-color:#4ea8de;box-shadow:0 0 0 4px #dff5ff}
+    button{
+      border:none;
+      border-radius:16px;
+      padding:13px 18px;
+      font-weight:900;
+      cursor:pointer;
+      color:#233;
+      background:var(--mint);
+      box-shadow:0 5px 0 #83d8b7;
+      transition:.15s;
+    }
+    button:hover{transform:translateY(-1px)}
+    button:active{transform:translateY(3px);box-shadow:0 2px 0 #83d8b7}
+    .toolbar{
+      margin:16px 0;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .toolbar button:nth-child(2){background:var(--yellow);box-shadow:0 5px 0 #e6b64b}
+    .toolbar button:nth-child(3){background:var(--pink);box-shadow:0 5px 0 #df82a5}
+    .section{
+      margin-top:20px;
+      background:white;
+      border-radius:28px;
+      padding:22px;
+      border:3px solid var(--line);
+      box-shadow:0 10px 22px rgba(36,48,71,.08);
+    }
+    .section-title{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:14px;
+    }
+    .badge{
+      min-width:42px;
+      height:42px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--purple);
+      color:white;
+      font-size:22px;
+      font-weight:900;
+      box-shadow:0 4px 0 #9d78b5;
+    }
+    h2{margin:0;font-size:28px;color:#3d5a80}
+    .question{
+      border:2px dashed #d8e2ef;
+      background:#fffdf8;
+      border-radius:22px;
+      padding:16px;
+      margin:14px 0;
+    }
+    .qhead{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      margin-bottom:10px;
+    }
+    .num{
+      flex:0 0 34px;
+      width:34px;
+      height:34px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:#90dbf4;
+      font-weight:900;
+      color:#18324a;
+    }
+    .stimulus{
+      background:#eef9ff;
+      border-left:6px solid #8ecae6;
+      border-radius:16px;
+      padding:10px 12px;
+      margin:8px 0 12px;
+      font-size:15px;
+    }
+    .pic{
+      font-size:42px;
+      float:right;
+      margin-left:10px;
+    }
+    .options{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:8px;
+    }
+    .option{
+      background:#f7fbff;
+      border:2px solid #e4edf7;
+      border-radius:15px;
+      padding:10px;
+      display:flex;
+      gap:8px;
+      align-items:center;
+    }
+    .tf-row,.match-row{
+      display:grid;
+      grid-template-columns:1fr auto auto;
+      gap:12px;
+      align-items:center;
+      padding:12px;
+      margin:8px 0;
+      background:#fbfdff;
+      border-radius:16px;
+      border:1px solid #e5edf5;
+    }
+    .match-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+    select{
+      padding:10px;
+      border-radius:14px;
+      border:2px solid #dbe7f3;
+      background:white;
+      font-weight:700;
+    }
+    textarea{
+      width:100%;
+      min-height:52px;
+      border:2px solid #dbe7f3;
+      border-radius:16px;
+      padding:12px;
+      resize:vertical;
+      font-size:15px;
+      background:repeating-linear-gradient(#fff,#fff 27px,#e9eef5 28px);
+    }
+    .complex-note{font-size:13px;color:#6b7280;font-weight:700;margin-top:5px}
+    .result{
+      position:sticky;
+      bottom:12px;
+      z-index:10;
+      background:#243047;
+      color:white;
+      padding:14px 18px;
+      border-radius:20px;
+      display:none;
+      box-shadow:0 10px 25px rgba(0,0,0,.2);
+      margin-top:18px;
+    }
+    .watermark{
+      text-align:center;
+      color:#697386;
+      padding:24px 0 10px;
+      font-size:14px;
+      letter-spacing:.5px;
+    }
+    @media(max-width:720px){
+      .student-card,.options,.match-grid{grid-template-columns:1fr}
+      .tf-row{grid-template-columns:1fr auto auto}
+    }
+    @media print{
+      body{background:white}
+      .toolbar,.result{display:none!important}
+      .section,.hero{box-shadow:none;break-inside:avoid}
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="hero">
+      <h1>Latihan Sumatif<br>Bahasa Inggris</h1>
+      <div class="subtitle">Kelas 7 SMP • Interactive Worksheet</div>
+      <div class="student-card">
+        <div>
+          <label>Nama Murid</label>
+          <input id="studentName" type="text" placeholder="Tulis nama lengkap..." />
+        </div>
+        <div>
+          <label>Kelas</label>
+          <input id="studentClass" type="text" placeholder="Contoh: 7A" />
+        </div>
+        <button onclick="startQuiz()">Mulai Mengerjakan</button>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <button onclick="saveAnswers()">💾 Simpan Jawaban</button>
+      <button onclick="downloadResult()">⬇️ Unduh Data</button>
+      <button onclick="resetQuiz()">🔄 Reset</button>
+    </div>
+
+    <main id="quizArea"></main>
+    <div id="resultBox" class="result"></div>
+    <div class="watermark">Created by Siti Sundari</div>
+  </div>
+
+  <script>
+    const mc = [
+      ['🚌','Look at the picture: a yellow bus is in front of the school.','What is it?',['A train','A bus','A ship','A bicycle'],'A bus'],
+      ['👩‍🏫','Mrs. Lina teaches English every Monday.','What is Mrs. Lina?',['A doctor','A teacher','A farmer','A singer'],'A teacher'],
+      ['🍎','There are three apples on the table.','How many apples are there?',['One','Two','Three','Four'],'Three'],
+      ['🏫','Rani studies at SMP Nusantara.','Where does Rani study?',['At school','At market','At hospital','At airport'],'At school'],
+      ['🌧️','The sky is dark and water falls from the clouds.','The weather is ...',['sunny','rainy','windy','cloudy'],'rainy'],
+      ['🐱','The cat is under the chair.','Where is the cat?',['On the chair','Under the chair','Beside the chair','Behind the chair'],'Under the chair'],
+      ['📚','Budi reads a book in the library.','What does Budi do?',['He sleeps','He reads','He swims','He cooks'],'He reads'],
+      ['🕖','The clock shows 07.00.','What time is it?',['Seven o’clock','Eight o’clock','Nine o’clock','Ten o’clock'],'Seven o’clock'],
+      ['👟','Sinta wears shoes for running.','The shoes are for ...',['sleeping','running','cooking','painting'],'running'],
+      ['🥛','Milk is white and good for our body.','What color is milk?',['Black','Blue','White','Green'],'White'],
+      ['🌳','A tree has green leaves and a brown trunk.','What color are the leaves?',['Green','Red','Purple','Orange'],'Green'],
+      ['🧹','Dina cleans the classroom with her friends.','They are ...',['lazy','helpful','angry','hungry'],'helpful'],
+      ['🏃','Andi can run fast.','What can Andi do?',['Run','Fly','Dive','Sing loudly'],'Run'],
+      ['🥘','My mother cooks fried rice in the kitchen.','Where does mother cook?',['Bedroom','Bathroom','Kitchen','Garden'],'Kitchen'],
+      ['🎒','A student brings books in a bag.','What does a student bring?',['Books','Shoes','Plates','Pillows'],'Books'],
+      ['🦁','A lion is a wild animal.','Which one is a wild animal?',['Cat','Goat','Lion','Chicken'],'Lion'],
+      ['📅','Today is Monday. Tomorrow is ...','What day is tomorrow?',['Sunday','Monday','Tuesday','Friday'],'Tuesday'],
+      ['🎨','The students draw pictures with crayons.','They use ...',['crayons','spoons','umbrellas','rulers only'],'crayons'],
+      ['💬','A: “How are you?” B: “...”','The best response is ...',['I am fine','Good night','See you','Thank you'],'I am fine'],
+      ['🚪','Please close the door.','What should you close?',['Window','Door','Book','Bag'],'Door']
+    ];
+
+    const complex = [
+      ['🍽️','Choose TWO things usually found in a kitchen.',['Pan','Pencil','Plate','Shoes'],['Pan','Plate']],
+      ['🏥','Choose TWO words related to hospital.',['Doctor','Nurse','Farmer','Pilot'],['Doctor','Nurse']],
+      ['🌞','Choose TWO expressions for greeting in the morning.',['Good morning','Good night','Hello','Goodbye'],['Good morning','Hello']],
+      ['📖','Choose TWO school objects.',['Book','Eraser','Banana','T-shirt'],['Book','Eraser']],
+      ['⚽','Choose TWO verbs about sport.',['Run','Jump','Sleep','Cook'],['Run','Jump']]
+    ];
+
+    const tf = [
+      ['🐟','A fish can swim.','True'],
+      ['🌙','The sun appears at night.','False'],
+      ['👂','We listen with our ears.','True'],
+      ['🍌','A banana is usually blue.','False'],
+      ['✏️','Students write with a pencil.','True']
+    ];
+
+    const matchingLeft = ['Good morning','Library','Teacher','Hungry','Elephant'];
+    const matchingRight = ['A place to read books','A greeting','A person who teaches','A big animal','Want to eat'];
+    const matchingKey = ['A greeting','A place to read books','A person who teaches','Want to eat','A big animal'];
+
+    const short = [
+      ['👋','Complete the greeting: Good _____.','morning'],
+      ['🎂','I am twelve years old. My age is _____.','twelve'],
+      ['🏠','Translate: rumah = _____.','house'],
+      ['🍚','I eat rice. The verb is _____.','eat'],
+      ['🖊️','This is a pen. The plural form is _____.','pens']
+    ];
+
+    function startQuiz(){
+      const name = document.getElementById('studentName').value.trim();
+      const cls = document.getElementById('studentClass').value.trim();
+      if(!name || !cls){alert('Isi nama dan kelas terlebih dahulu.');return;}
+      localStorage.setItem('studentName',name);
+      localStorage.setItem('studentClass',cls);
+      renderQuiz();
+      saveAnswers();
+    }
+
+    function renderQuiz(){
+      let html = sectionHeader('A','PILIHAN GANDA','Pilih satu jawaban yang paling tepat.');
+      mc.forEach((q,i)=>{
+        html += questionBlock(i+1,q[0],q[1],q[2],q[3].map(opt=>`<label class="option"><input type="radio" name="mc${i}" value="${opt}"> ${opt}</label>`).join(''));
+      });
+      html += '</section>';
+
+      html += sectionHeader('B','PILIHAN GANDA KOMPLEKS','Pilih DUA jawaban yang benar.');
+      complex.forEach((q,i)=>{
+        html += questionBlock(i+1,q[0],q[1],q[2],q[3].map(opt=>`<label class="option"><input type="checkbox" name="cx${i}" value="${opt}"> ${opt}</label>`).join('') + '<div class="complex-note">Centang 2 pilihan.</div>');
+      });
+      html += '</section>';
+
+      html += sectionHeader('C','BENAR / SALAH','Pilih True jika pernyataan benar, False jika salah.');
+      tf.forEach((q,i)=>{
+        html += `<div class="tf-row"><div><b>${i+1}. <span style="font-size:24px">${q[0]}</span></b> ${q[1]}</div><label><input type="radio" name="tf${i}" value="True"> True</label><label><input type="radio" name="tf${i}" value="False"> False</label></div>`;
+      });
+      html += '</section>';
+
+      html += sectionHeader('D','MENJODOHKAN','Pilih pasangan arti yang tepat.');
+      html += '<div class="match-grid">';
+      matchingLeft.forEach((left,i)=>{
+        html += `<div class="match-row"><b>${i+1}. ${left}</b><select name="mt${i}"><option value="">Pilih pasangan...</option>${matchingRight.map(r=>`<option value="${r}">${r}</option>`).join('')}</select><span>🔗</span></div>`;
+      });
+      html += '</div></section>';
+
+      html += sectionHeader('E','ISIAN SINGKAT','Tulis jawaban singkat dengan benar.');
+      short.forEach((q,i)=>{
+        html += questionBlock(i+1,q[0],q[1],q[1],`<input type="text" name="sh${i}" placeholder="Jawaban...">`);
+      });
+      html += '</section>';
+      document.getElementById('quizArea').innerHTML = html;
+      restoreAnswers();
+    }
+
+    function sectionHeader(letter,title,desc){
+      return `<section class="section"><div class="section-title"><div class="badge">${letter}</div><div><h2>${title}</h2><p style="margin:4px 0 0;font-weight:700">${desc}</p></div></div>`;
+    }
+    function questionBlock(num,pic,stimulus,question,body){
+      return `<div class="question"><div class="qhead"><div class="num">${num}</div><div style="width:100%"><span class="pic">${pic}</span><div class="stimulus"><b>Stimulus:</b> ${stimulus}</div><b>${question}</b><div class="options">${body}</div></div></div></div>`;
+    }
+
+    function collectAnswers(){
+      const data = {
+        nama: document.getElementById('studentName').value,
+        kelas: document.getElementById('studentClass').value,
+        waktu: new Date().toLocaleString('id-ID'),
+        jawaban:{}, skor:0, total:40
+      };
+      mc.forEach((q,i)=>{data.jawaban['PG '+(i+1)] = val(`mc${i}`); if(val(`mc${i}`)===q[4]) data.skor++;});
+      complex.forEach((q,i)=>{const a=checks(`cx${i}`); data.jawaban['PG Kompleks '+(i+1)] = a.join(', '); if(equalSet(a,q[4])) data.skor++;});
+      tf.forEach((q,i)=>{data.jawaban['Benar Salah '+(i+1)] = val(`tf${i}`); if(val(`tf${i}`)===q[2]) data.skor++;});
+      matchingKey.forEach((key,i)=>{const a=document.querySelector(`[name="mt${i}"]`)?.value||''; data.jawaban['Menjodohkan '+(i+1)] = a; if(a===key) data.skor++;});
+      short.forEach((q,i)=>{const a=(document.querySelector(`[name="sh${i}"]`)?.value||'').trim().toLowerCase(); data.jawaban['Isian '+(i+1)] = a; if(a===q[2]) data.skor++;});
+      data.nilai = Math.round((data.skor/data.total)*100);
+      return data;
+    }
+    function val(name){return document.querySelector(`[name="${name}"]:checked`)?.value||'';}
+    function checks(name){return [...document.querySelectorAll(`[name="${name}"]:checked`)].map(x=>x.value);}
+    function equalSet(a,b){return a.length===b.length && b.every(x=>a.includes(x));}
+
+    function saveAnswers(){
+      const data = collectAnswers();
+      localStorage.setItem('englishGrade7Result',JSON.stringify(data));
+      const box=document.getElementById('resultBox');
+      box.style.display='block';
+      box.innerHTML=`✅ Data tersimpan otomatis. Nama: <b>${data.nama}</b> | Kelas: <b>${data.kelas}</b> | Skor sementara: <b>${data.skor}/${data.total}</b> | Nilai: <b>${data.nilai}</b>`;
+    }
+
+    document.addEventListener('change',()=>{if(document.getElementById('quizArea').innerHTML) saveAnswers();});
+    document.addEventListener('input',e=>{if(e.target.tagName==='INPUT' && document.getElementById('quizArea').innerHTML) saveAnswers();});
+
+    function restoreAnswers(){
+      const saved = JSON.parse(localStorage.getItem('englishGrade7Result')||'null');
+      if(!saved) return;
+      document.getElementById('studentName').value = saved.nama || '';
+      document.getElementById('studentClass').value = saved.kelas || '';
+    }
+
+    function downloadResult(){
+      const data = collectAnswers();
+      const blob = new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `hasil_bahasa_inggris_kelas7_${data.nama||'murid'}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    function resetQuiz(){
+      if(confirm('Hapus semua jawaban?')){
+        localStorage.removeItem('englishGrade7Result');
+        document.querySelectorAll('input[type="radio"],input[type="checkbox"]').forEach(x=>x.checked=false);
+        document.querySelectorAll('input[type="text"]').forEach((x,i)=>{ if(i>1) x.value=''; });
+        document.querySelectorAll('select').forEach(x=>x.value='');
+        document.getElementById('resultBox').style.display='none';
+      }
+    }
+
+    window.onload = () => {
+      const name = localStorage.getItem('studentName');
+      const cls = localStorage.getItem('studentClass');
+      if(name) document.getElementById('studentName').value=name;
+      if(cls) document.getElementById('studentClass').value=cls;
+    };
+  </script>
+</body>
+</html>
